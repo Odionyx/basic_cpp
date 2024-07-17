@@ -158,7 +158,7 @@ int main(int argc, char** argv) {
 
     int size {0};
 
-    std::ifstream fin("E:\\gitfolder\\basic_cpp\\oop_abstract_encapsul\\sorting_address\\in.txt");
+    std::ifstream fin("in.txt");
     std::ofstream fout("out.txt");
 
     if(!readingSizeFF (fin, size)){
