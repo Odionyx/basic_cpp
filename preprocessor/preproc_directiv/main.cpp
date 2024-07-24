@@ -1,17 +1,23 @@
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
 #include <iostream>
-#include <Windows.h>
 using std::cout, std::cin, std::endl;
+
 
 #define MODE 0
 #ifndef MODE
 #error <MODE is not initialized>
 #endif
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
     setlocale(LC_ALL, "ru_RU");
+#ifdef _WIN32
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
+#endif
+
     int a{0}, b{0};
 #if ((1 < MODE) || (MODE < 0))
     std::cout << "Неизвестный режим. Завершение работы." << std::endl;
