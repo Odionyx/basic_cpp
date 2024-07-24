@@ -18,13 +18,15 @@ int main(int argc, char** argv)
 #elif  (MODE == 0)
     cout << "Работаю в режиме тренировки..." << endl;
 #else
-#define add(a,b) a+=b
+#define add(a,b) (a)+=(b)
     cout << "Работаю в боевом режиме..." << endl;
     cout << "Введите число 1: ";
     cin >> a;
     cout << "Введите число 2: ";
     cin >> b;
     cout << "Результат сложения: " << (add(a, b))<< endl;
+#undef add
+
 #endif
 #undef MODE
     return 0;
